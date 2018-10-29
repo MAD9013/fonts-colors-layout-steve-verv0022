@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* You must use a DIFFERENT FONT THAT THIS ONE as your webfont */
+
+/*************************************************
+            DEFAULTS
+*************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    /* change this font stack to your own choices */
+    line-height: 1.5;
+}
+
+p {}
+
+a {}
+
+ul {}
+
+ol {}
+
+li {}
+
+img {}
+
+/*************************************************
+            HEADER
+*************************************************/
+header {
+    background-image: url("../img/skate.jpg");
+    background-position: center;
+    color: maroon;
+    text-shadow: 5px 2px 5px black;
+}
+
+header > h1 {
+    padding: 1rem 0rem 0rem 2rem;
+    font-size: 4.236em;
+
+}
+
+header > h2 {
+    padding: 0rem 0rem 1rem 2rem;
+    font-size: 4.236em;
+    text-decoration: none;
+}
+
+/*************************************************
+            NAVMENU
+*************************************************/
+.mainnav {
+    display: flex;
+    border-top: 4px solid maroon;
+    border-bottom: 4px solid maroon;
+    background-color: #eee;
+    padding: 6px 0;
+
+}
+
+.subnav {
+    display: flex;
+}
+
+nav > a,
+nav > a:visited,
+nav > a:link {
+    text-decoration: none;
+    font-size: 1.618em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+nav > a:active,
+nav > a:focus,
+nav > a:hover {
+    color: maroon;
+    text-decoration: underline;
+
+
+}
+
+/*************************************************
+            MAIN CONTENT
+*************************************************/
+main {
+    padding: 1rem 1rem;
+}
+
+
+section {}
+
+section > h1,
+h2 {
+    padding-left: 6px;
+    font-size: 1.618em;
+    text-decoration: underline maroon;
+}
+
+section p {
+    text-align: left;
+    padding: 6px;
+    font-size: 1rem;
+
+}
+
+section p img {
+    float: left;
+    border: 1px solid black;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    box-shadow: 3px 3px 3px rgb(128, 128, 128);
+}
+
+.first {
+    background-color: #aaa;
+    box-shadow: 3px 3px 3px rgb(128, 128, 128);
+
+}
+
+.second {
+    background-color: #ccc;
+    box-shadow: 3px 3px 3px rgb(128, 128, 128);
+
+}
+
+.third {
+    background-color: #eee;
+    box-shadow: 3px 3px 3px rgb(128, 128, 128);
+}
+
+
+
+/*************************************************
+            FOOTER
+*************************************************/
+footer {
+    padding: 1rem 2rem;
+    background-color: #ccc;
+}
+
+.foot nav {}
+
+.foot section {}
+
+.foot dl {}
+
+.foot dt {
+    font-size: 1.618em;
+    text-decoration: underline maroon;
+}
+
+.foot dd {
+    text-align: center;
+    font-size: 1em;
+}
+
+.foot dd a,
+.foot dd a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.foot dd a:active,
+.foot dd a:focus,
+.foot dd a:hover {
+    color: maroon;
+    text-decoration: underline;
+
+}
+
+/*************************************************
+            MEDIA QUERIES for layout
+*************************************************/
+@media (max-width: 599px) {
+    header {
+        border-top: solid green 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    nav > a {
+        padding: 5px;
+        border-bottom: 4px solid maroon;
+    }
+
+    nav > a:last-of-type {
+        border: none;
+    }
+
+    footer {
+        border-top: solid green 20px;
+        display: flex;
+        flex-direction: column-reverse
+    }
+
+    .comments {
+        text-align: center;
+    }
+
+    .subnav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    
+    .form-box > * {
+        font-size: 1rem;
+        height: auto;
+        margin:6px;
+
+    }
+
+    .form-box textarea {
+        height: 5rem;;
+        width: 70%
+        
+    }
+
+    .form-box button {
+        padding: 2px;
+        width: auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width:999px) {
+
+    header {
+        border-top: solid blue 20px;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+
+    }
+
+    img {
+        width: 40%;
+    }
+
+    .first {
+        grid-column: 1/span 2;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        border-top: solid blue 20px;
+    }
+
+    .comments {
+        text-align: center;
+        
+    }
+
+
+    textarea {
+        width: 50%;
+        padding:1rem;
+    }
+
+    .subnav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .form-box > * {
+        font-size: 1rem;
+        height: auto;
+        margin:6px;
+
+    }
+
+    .form-box textarea {
+        height: 5rem;;
+        width: 70%
+        
+    }
+
+    .form-box button {
+        padding: 2px;
+        width: auto;
+    }
+    
+}
+
+@media (min-width: 1000px) {
+    header {
+        border-top: solid maroon 20px;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    img {
+        width: 40%;
+    }
+
+    main {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border-top: solid maroon 20px;
+
+    }
+
+    .subnav {
+        justify-content: space-around;
+    }
+
+    .comments {
+        margin-top: 1rem;
+        text-align: center;
+       
+        
+    }
+
+    .form-box > * {
+        font-size: 1rem;
+        height: auto;
+        margin:6px;
+
+    }
+
+    .form-box textarea {
+        height: 5rem;;
+        width: 100%
+        
+    }
+
+    .form-box button {
+        padding: 2px;
+        width: auto;
+    }
+
+}
